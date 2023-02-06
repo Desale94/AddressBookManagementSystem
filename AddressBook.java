@@ -125,7 +125,7 @@ public class AddressBook {
         System.out.println("Enter First Name:");
         String fname = sc.nextLine();
         System.out.println("Enter Last Name:");
-        String lname = sc.nextLine();
+        String lname = sc.next();
 
         for (int j = 0; j < people.size(); j++)
         {
@@ -141,5 +141,16 @@ public class AddressBook {
         }
 
     }
+    public void addMultipleContact(){
+      System.out.println("Enter how many contact add: ");
+      int name=sc.nextInt();
+      for (int i=0;i<people.size();i++){
+          Contact person = people.get(i);
+          if (people.get(i).getFirstName().equals(name))
+              people.add(person);
 
-}
+      }
+
+        }
+    }
+
